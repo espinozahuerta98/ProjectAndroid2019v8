@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ProjectAndroid2019</string>
+    <string name="hint_username">Correo</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="text_button_login">Continuar</string>
+    <string name="dont_have_account">¿No tienes cuenta?</string>
+    <string name="create_here">Crea una aquí</string>
+    <string name="hint_email">Correo</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_user">Usuario</string>
+    <string name="hint_confirm_password">Confirmar contraseña</string>
+    <string name="title_activity_referencia">ReferenciaActivity</string>
+    <string name="toolbar_tittle_createaccount">Crear Cuenta</string>
+    <string name="title_activity_navigation_drawer__view">NavigationDrawer_View</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">LogOut</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_menu_navigation_drawer__view">MenuNavigationDrawer_View</string>
+    <string name="username_card">Ceviche</string>
+    <string name="toolbar_tittle_foods">Comidas</string>
+</resources>
