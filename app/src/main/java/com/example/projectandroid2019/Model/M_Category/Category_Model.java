@@ -8,8 +8,6 @@ public class Category_Model {
         Name = name;
         Image = image;
     }
-
-
     public String getName() {
         return Name;
     }

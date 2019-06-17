@@ -22,14 +22,11 @@
             android:layout_height="0dp">
 
             <TextView
+                android:background="@drawable/logo_menu"
                 android:id="@+id/textGrid"
-                android:text="GRID LAYOUT"
-                android:textSize="34sp"
-                android:textColor="@android:color/white"
                 android:layout_centerInParent="true"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
         </RelativeLayout>
 
         <GridLayout
