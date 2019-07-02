@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -25,7 +26,11 @@ import android.widget.Toast;
 
 import com.example.projectandroid2019.Adapter.ViewHolder;
 import com.example.projectandroid2019.R;
+import com.example.projectandroid2019.View.V_Drink.Drink_View;
+import com.example.projectandroid2019.View.V_Food.Food_View;
 import com.example.projectandroid2019.View.V_Login.Login_View;
+import com.example.projectandroid2019.View.V_Map.Map_View;
+import com.example.projectandroid2019.View.V_Order.Order_View;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -36,11 +41,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class MenuNavigationDrawer_View extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
 
     private FirebaseAuth mAuth;
     private FirebaseUser currentUser;
     private DatabaseReference mDatabase;
+
+    private CardView comidas,bebidas,pedidos,map;
+
 
 
 
@@ -110,10 +118,37 @@ public class MenuNavigationDrawer_View extends AppCompatActivity
 
         updateNavHeader();
 
+        /*
+        comidas = (CardView) findViewById(R.id.comidas);
+        bebidas = (CardView) findViewById(R.id.bebidas);
+        pedidos = (CardView) findViewById(R.id.pedidos);
+        map = (CardView) findViewById(R.id.map);
 
+        comidas.setOnClickListener((View.OnClickListener) this);
+        bebidas.setOnClickListener((View.OnClickListener) this);
+        pedidos.setOnClickListener((View.OnClickListener) this);
+        map.setOnClickListener((View.OnClickListener) this);*/
     }
 
+    public void goComidas(View view){
+        Intent intent = new Intent(MenuNavigationDrawer_View.this, Food_View.class);
+        startActivity(intent);
+    }
 
+    public void goBebidas(View view){
+        Intent intent = new Intent(MenuNavigationDrawer_View.this, Drink_View.class);
+        startActivity(intent);
+    }
+
+    public void goPedidos(View view){
+        Intent intent = new Intent(MenuNavigationDrawer_View.this, Order_View.class);
+        startActivity(intent);
+    }
+
+    public void goMap(View view){
+        Intent intent = new Intent(MenuNavigationDrawer_View.this, Map_View.class);
+        startActivity(intent);
+    }
 
 
     @Override
@@ -186,6 +221,8 @@ public class MenuNavigationDrawer_View extends AppCompatActivity
         // first we need to import the library
 
     }
+
+
 
 
 }

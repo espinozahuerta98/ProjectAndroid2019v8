@@ -11,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
+
         <activity
             android:name=".View.V_MenuNavigationDrawer.MenuNavigationDrawer_View"
             android:label="@string/title_activity_menu_navigation_drawer__view"
@@ -22,6 +25,40 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".View.V_Login.Login_View" />
         </activity>
+
+        <activity
+            android:name=".View.V_Food.Food_View"
+            android:parentActivityName=".View.V_MenuNavigationDrawer.MenuNavigationDrawer_View">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".View.V_Login.Login_View" />
+        </activity>
+
+        <activity
+            android:name=".View.V_Drink.Drink_View"
+            android:parentActivityName=".View.V_MenuNavigationDrawer.MenuNavigationDrawer_View">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".View.V_Login.Login_View" />
+        </activity>
+
+        <activity
+            android:name=".View.V_Order.Order_View"
+            android:parentActivityName=".View.V_MenuNavigationDrawer.MenuNavigationDrawer_View">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".View.V_Login.Login_View" />
+        </activity>
+
+        <activity
+            android:name=".View.V_Map.Map_View"
+            android:parentActivityName=".View.V_MenuNavigationDrawer.MenuNavigationDrawer_View">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".View.V_Login.Login_View" />
+        </activity>
+
+
         <activity android:name=".View.V_Login.Login_View" />
         <activity android:name=".View.Welcome_View">
             <intent-filter>

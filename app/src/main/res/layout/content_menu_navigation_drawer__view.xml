@@ -29,6 +29,7 @@
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
+            android:onClick="goComidas"
             >
             <LinearLayout
                 android:layout_width="match_parent"
@@ -60,6 +61,7 @@
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
+            android:onClick="goBebidas"
             >
             <LinearLayout
                 android:layout_width="match_parent"
@@ -99,6 +101,7 @@
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
+            android:onClick="goPedidos"
             >
             <LinearLayout
                 android:layout_width="match_parent"
@@ -131,6 +134,7 @@
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"
+            android:onClick="goMap"
             >
             <LinearLayout
                 android:layout_width="match_parent"

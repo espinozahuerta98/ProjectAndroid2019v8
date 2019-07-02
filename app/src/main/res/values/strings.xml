@@ -29,4 +29,10 @@
     <string name="title_activity_menu_navigation_drawer__view">Home</string>
     <string name="username_card">Ceviche</string>
     <string name="toolbar_tittle_foods">Comidas</string>
+    <string name="toolbar_tittle_drinks">Bebidas</string>
+    <string name="toolbar_tittle_order">Pedidos</string>
+    <string name="toolbar_tittle_map">Map</string>
+
+
+
 </resources>
