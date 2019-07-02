@@ -26,7 +26,7 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">LogOut</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_menu_navigation_drawer__view">MenuNavigationDrawer_View</string>
+    <string name="title_activity_menu_navigation_drawer__view">Home</string>
     <string name="username_card">Ceviche</string>
     <string name="toolbar_tittle_foods">Comidas</string>
 </resources>
