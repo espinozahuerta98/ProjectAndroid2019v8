@@ -1,15 +1,11 @@
 package com.example.projectandroid2019.View.V_MenuNavigationDrawer;
 
 import android.content.Intent;
-import android.graphics.ColorSpace;
-import android.graphics.Picture;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -20,18 +16,16 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.projectandroid2019.Adapter.ViewHolder;
+import com.example.projectandroid2019.Model.User_Model;
 import com.example.projectandroid2019.R;
 import com.example.projectandroid2019.View.V_Drink.Drink_View;
 import com.example.projectandroid2019.View.V_Food.Food_View;
 import com.example.projectandroid2019.View.V_Login.Login_View;
 import com.example.projectandroid2019.View.V_Map.Map_View;
 import com.example.projectandroid2019.View.V_Order.Order_View;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -81,32 +75,13 @@ public class MenuNavigationDrawer_View extends AppCompatActivity
        mRef = mFirebaseDatabase.getReference("Categorias");*/
 
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
         //FirebaseUser user = mAuth.getCurrentUser();
         //user.getDisplayName();
         //For GoogleSignIn
         //if(mAuth.getCurrentUser()!=null)
         //Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show();
-
-      /* categories.child("Usuarios").child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Toast.makeText(MenuNavigationDrawer_View.this, "Bienvenido " + dataSnapshot.child("name").getValue(), Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-       });*/
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -115,7 +90,6 @@ public class MenuNavigationDrawer_View extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-
         updateNavHeader();
 
         /*
@@ -128,6 +102,25 @@ public class MenuNavigationDrawer_View extends AppCompatActivity
         bebidas.setOnClickListener((View.OnClickListener) this);
         pedidos.setOnClickListener((View.OnClickListener) this);
         map.setOnClickListener((View.OnClickListener) this);*/
+        welcomeMessage();
+    }
+
+    public void welcomeMessage(){
+
+        mDatabase.child("Usuarios").child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                User_Model user_model = dataSnapshot.getValue(User_Model.class);
+
+                Toast.makeText(MenuNavigationDrawer_View.this, "Bienvenido " +user_model.getName() , Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
     }
 
     public void goComidas(View view){
