@@ -3,10 +3,7 @@ package com.example.projectandroid2019.View.V_MenuNavigationDrawer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -20,12 +17,13 @@ import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.projectandroid2019.View.V_Map.MapsActivity;
 import com.example.projectandroid2019.Model.User_Model;
 import com.example.projectandroid2019.R;
+import com.example.projectandroid2019.View.Information;
 import com.example.projectandroid2019.View.V_Drink.Drink_View;
 import com.example.projectandroid2019.View.V_Food.Food_View;
 import com.example.projectandroid2019.View.V_Login.Login_View;
-import com.example.projectandroid2019.View.V_Map.Map_View;
 import com.example.projectandroid2019.View.V_Order.Order_View;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -85,7 +83,10 @@ public class MenuNavigationDrawer_View extends AppCompatActivity
         //Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show();
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
+
         NavigationView navigationView = findViewById(R.id.nav_view);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -139,7 +140,7 @@ public class MenuNavigationDrawer_View extends AppCompatActivity
     }
 
     public void goMap(View view){
-        Intent intent = new Intent(MenuNavigationDrawer_View.this, Map_View.class);
+        Intent intent = new Intent(MenuNavigationDrawer_View.this, MapsActivity.class);
         startActivity(intent);
     }
 
@@ -175,10 +176,13 @@ public class MenuNavigationDrawer_View extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        //FragmentManager fragmentManager = getSupportFragmentManager();
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
+           // fragmentManager.beginTransaction().replace(R.id.contenedor,new Information_Fragment()).commit();
+            Intent intent = new Intent(getApplicationContext(), Information.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_slideshow) {
 

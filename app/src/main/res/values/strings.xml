@@ -33,6 +33,8 @@
     <string name="toolbar_tittle_order">Pedidos</string>
     <string name="toolbar_tittle_map">Map</string>
     <string name="title_activity_details_food__view">DetailsFood_VIew</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_information">Info</string>
 
 
 </resources>
