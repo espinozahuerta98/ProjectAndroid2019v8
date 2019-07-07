@@ -19,7 +19,6 @@
         android:roundIcon="@mipmap/sazondelmuelle_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -45,6 +44,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".View.Information"
+            android:parentActivityName=".View.V_MenuNavigationDrawer.MenuNavigationDrawer_View">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".View.V_Login.Login_View" />
+        </activity>
+
+        <activity
+            android:name=".View.More"
             android:parentActivityName=".View.V_MenuNavigationDrawer.MenuNavigationDrawer_View">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -78,8 +85,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".View.V_Login.Login_View" />
         </activity>
-
-
         <activity android:name=".View.V_Login.Login_View" />
         <activity android:name=".View.Welcome_View">
             <intent-filter>

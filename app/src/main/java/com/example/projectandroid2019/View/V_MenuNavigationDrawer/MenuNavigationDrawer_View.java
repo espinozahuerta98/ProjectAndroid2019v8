@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.projectandroid2019.View.More;
 import com.example.projectandroid2019.View.V_Map.MapsActivity;
 import com.example.projectandroid2019.Model.User_Model;
 import com.example.projectandroid2019.R;
@@ -156,7 +157,7 @@ public class MenuNavigationDrawer_View extends AppCompatActivity
         return true;
     }
 
-    @Override
+/*    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -169,7 +170,7 @@ public class MenuNavigationDrawer_View extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -177,18 +178,13 @@ public class MenuNavigationDrawer_View extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         //FragmentManager fragmentManager = getSupportFragmentManager();
-        if (id == R.id.nav_home) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-           // fragmentManager.beginTransaction().replace(R.id.contenedor,new Information_Fragment()).commit();
+        if (id == R.id.nav_more) {
+            Intent intent = new Intent(getApplicationContext(), More.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_information) {
+
             Intent intent = new Intent(getApplicationContext(), Information.class);
             startActivity(intent);
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_tools) {
-
-        } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_signout) {
             FirebaseAuth.getInstance().signOut();
